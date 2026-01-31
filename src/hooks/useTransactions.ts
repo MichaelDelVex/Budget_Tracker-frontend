@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchTransactions } from '../services/transactions'
+import { getAllTransactions } from '../api/transcations'
 import type { Transaction } from '../types/transactions'
 
 export function useTransactions() {
@@ -8,7 +8,7 @@ export function useTransactions() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetchTransactions()
+    getAllTransactions()
       .then(setData)
       .catch(err => setError(err.message))
       .finally(() => setLoading(false))
