@@ -1,3 +1,8 @@
+export interface TransactionsResponse {
+  count: number,
+  transactions: Transaction[]
+}
+
 export interface Transaction {
   id: string
   accountId:string,

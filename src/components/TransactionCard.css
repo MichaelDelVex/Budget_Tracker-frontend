@@ -1,0 +1,78 @@
+.transaction-card {
+  width: 400px;
+  height: 150px;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  margin-bottom: 12px;
+}
+
+.transaction-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.transaction-card.negative {
+  border-left: 6px solid #dc2626; /* red-600 */
+}
+
+.transaction-card.positive {
+  border-left: 6px solid #16a34a; /* green-600 */
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.transaction-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details {
+  max-width: 70%;
+}
+
+.description {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.category {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.transaction-card.negative .amount {
+  color: #dc2626;
+}
+
+.transaction-card.positive .amount {
+  color: #16a34a;
+}
+
+.transaction-footer {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-align: center;
+}

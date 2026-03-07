@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { getAllTransactions } from '../api/transcations'
-import type { Transaction } from '../types/transactions'
+import type { TransactionsResponse } from '../types/transactions'
 
 export function useTransactions() {
-  const [data, setData] = useState<Transaction[]>([])
+  const [data, setData] = useState<TransactionsResponse>({ count: 0, transactions: [] })
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
